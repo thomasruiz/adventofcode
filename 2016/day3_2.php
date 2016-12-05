@@ -7,11 +7,11 @@ $validTriangles = 0;
 foreach (array_chunk($input, 3) as $triangles) {
     $parsed = [[], [], []];
     foreach ($triangles as $side) {
-        $side = array_values(array_filter(explode(' ', $side)));
-        if (!count($side)) {
+        if (!strlen($side)) {
             continue;
         }
 
+        $side = array_values(array_filter(explode(' ', $side)));
         $parsed[0][] = $side[0];
         $parsed[1][] = $side[1];
         $parsed[2][] = $side[2];

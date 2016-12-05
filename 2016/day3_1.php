@@ -5,6 +5,10 @@ $input = explode("\n", $input);
 
 $validTriangles = 0;
 foreach ($input as $triangle) {
+    if (!strlen($triangle)) {
+        continue;
+    }
+
     $validSides = 0;
     $sides = array_filter(explode(' ', $triangle));
     foreach ($sides as $i => $side) {

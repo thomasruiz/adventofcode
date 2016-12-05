@@ -21,6 +21,10 @@ $keypad = [
 
 $number = 5;
 foreach ($input as $line) {
+    if (!strlen($line)) {
+        continue;
+    }
+
     $letters = str_split($line);
 
     foreach ($letters as $letter) {

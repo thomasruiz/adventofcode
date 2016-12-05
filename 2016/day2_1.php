@@ -7,6 +7,10 @@ $actions = ['U' => -3, 'L' => -1, 'R' => 1, 'D' => 3];
 
 $number = 5;
 foreach ($input as $line) {
+    if (!strlen($line)) {
+        continue;
+    }
+
     $letters = str_split($line);
 
     foreach ($letters as $letter) {

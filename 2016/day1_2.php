@@ -17,12 +17,14 @@ foreach ($input as $task) {
         if ($direction === 4) {
             $direction = 0;
         }
-    } else {
+    } elseif ($turn === 'L') {
         $direction -= 1;
 
         if ($direction === -1) {
             $direction = 3;
         }
+    } else {
+        continue;
     }
 
     for ($i = 0; $i < $steps; $i++) {
