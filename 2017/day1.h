@@ -6,8 +6,8 @@
 
 class day1 : public day {
 public:
-    std::string first(std::string input) final;
-    std::string second(std::string input) final;
+    std::string first(const string &input) final;
+    std::string second(const string &input) final;
 };
 
 

@@ -5,4 +5,4 @@ file(COPY input DESTINATION ${CMAKE_BINARY_DIR})
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(aoc main.cpp day1.cpp day1.h day.h)
+add_executable(aoc main.cpp day1.cpp day1.h day.h day2.cpp day2.h util.h)

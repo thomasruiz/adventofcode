@@ -7,8 +7,8 @@ using namespace std;
 
 class day {
 public:
-    virtual string first(string input) = 0;
-    virtual string second(string input) = 0;
+    virtual string first(const string &input) = 0;
+    virtual string second(const string &input) = 0;
 };
 
 #endif //INC_2017_DAY_H

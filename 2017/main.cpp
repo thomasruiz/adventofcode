@@ -1,33 +1,15 @@
 #include <iostream>
-#include <map>
 #include <fstream>
 #include "day.h"
 #include "day1.h"
+#include "day2.h"
+#include "util.h"
 
 using namespace std;
 
-#include <algorithm>
-#include <locale>
-
-static inline void ltrim(std::string &s) {
-    s.erase(s.begin(), std::find_if(s.begin(), s.end(), [](int ch) {
-        return !std::isspace(ch);
-    }));
-}
-
-static inline void rtrim(std::string &s) {
-    s.erase(std::find_if(s.rbegin(), s.rend(), [](int ch) {
-        return !std::isspace(ch);
-    }).base(), s.end());
-}
-
-static inline void trim(std::string &s) {
-    ltrim(s);
-    rtrim(s);
-}
-
 day *findDay(string day) {
     if (day == "day1") return new day1;
+    if (day == "day2") return new day2;
 
     return nullptr;
 }
@@ -47,6 +29,11 @@ int main(int argc, char **argv) {
     }
 
     day *runningDay = findDay(string(argv[1]));
+    if (runningDay == nullptr) {
+        cerr << "day not found" << endl;
+        return 1;
+    }
+
     string input = getInput(argv[2]);
 
     cout << runningDay->first(input) << endl;
