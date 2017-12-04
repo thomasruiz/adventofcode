@@ -4,6 +4,7 @@
 #include "day1.h"
 #include "day2.h"
 #include "day3.h"
+#include "day4.h"
 #include "util.h"
 
 using namespace std;
@@ -12,6 +13,7 @@ day *findDay(string day) {
     if (day == "day1") return new day1;
     if (day == "day2") return new day2;
     if (day == "day3") return new day3;
+    if (day == "day4") return new day4;
 
     return nullptr;
 }
