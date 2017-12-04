@@ -3,6 +3,7 @@
 #include "day.h"
 #include "day1.h"
 #include "day2.h"
+#include "day3.h"
 #include "util.h"
 
 using namespace std;
@@ -10,6 +11,7 @@ using namespace std;
 day *findDay(string day) {
     if (day == "day1") return new day1;
     if (day == "day2") return new day2;
+    if (day == "day3") return new day3;
 
     return nullptr;
 }
@@ -35,6 +37,11 @@ int main(int argc, char **argv) {
     }
 
     string input = getInput(argv[2]);
+    trim(input);
+    if (input.empty()) {
+        cerr << "input not found" << endl;
+        return 1;
+    }
 
     cout << runningDay->first(input) << endl;
     cout << "---------------------------" << endl;

@@ -34,7 +34,6 @@ string day2::first(const string &input) {
 string day2::second(const string &input) {
     int total = 0;
     for (string &line : split(input, '\n')) {
-        trim(line);
         if (line.empty()) {
             continue;
         }
