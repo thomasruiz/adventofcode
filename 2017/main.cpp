@@ -6,6 +6,7 @@
 #include "day3.h"
 #include "day4.h"
 #include "day5.h"
+#include "day6.h"
 #include "util.h"
 
 using namespace std;
@@ -16,6 +17,7 @@ day *findDay(const string &day) {
     if (day == "day3") return new day3;
     if (day == "day4") return new day4;
     if (day == "day5") return new day5;
+    if (day == "day6") return new day6;
 
     return nullptr;
 }
